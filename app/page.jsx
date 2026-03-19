@@ -1,8 +1,43 @@
 import EmailSignupForm from "./email-signup-form";
+import { getSiteUrl } from "../lib/site";
+
+const siteUrl = getSiteUrl();
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Roshan Zamil",
+  alternateName: "Zamil",
+  url: siteUrl,
+  image: `${siteUrl}/roshan.gif`,
+  jobTitle: "Co-Founder and Software Developer",
+  description:
+    "Roshan Zamil builds websites, apps, and digital systems focused on real business outcomes.",
+  worksFor: {
+    "@type": "Organization",
+    name: "BroCrypt",
+    url: "https://brocrypt.com/"
+  },
+  sameAs: [
+    "https://www.linkedin.com/in/roshan-zamil",
+    "https://brocrypt.com/"
+  ],
+  knowsAbout: [
+    "web development",
+    "web applications",
+    "seo",
+    "analytics",
+    "performance optimization",
+    "digital systems"
+  ]
+};
 
 export default function HomePage() {
   return (
     <main className="page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       <nav className="top-nav" aria-label="primary">
         <a href="https://brocrypt.com" target="_blank" rel="noreferrer">
           my company link
@@ -35,7 +70,15 @@ export default function HomePage() {
             of my own.
           </p>
           <p>
-            it was about proving that what i had in my head could actually become something useful for other people.
+            it was about{" "}
+            <a
+              href="https://www.linkedin.com/posts/roshan-zamil_killingit-activity-7251926685678243840-a0Yi?utm_source=share&utm_medium=member_desktop&rcm=ACoAAChISbUBYvF1W7jcP3qqoL_ZO1zTIlXfXQw"
+              target="_blank"
+              rel="noreferrer"
+            >
+              proving that what i had
+            </a>{" "}
+            in my head could actually become something useful for other people.
           </p>
           <p>
             about a year ago, my brother{" "}
