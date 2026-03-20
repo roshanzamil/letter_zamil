@@ -1,4 +1,3 @@
-import EmailSignupForm from "./email-signup-form";
 import { getSiteUrl } from "../lib/site";
 
 const siteUrl = getSiteUrl();
@@ -213,11 +212,6 @@ export default function HomePage() {
             together, reach out.
           </p>
           <p>i&apos;d love to hear from you.</p>
-          <p>
-            ps: i&apos;m planning to share practical tips and tricks from my experience that
-            actually work. if you&apos;d like to be part of it, drop your email below.
-          </p>
-          <EmailSignupForm />
           <p>- roshan</p>
           <img className="signature-gif" src="/roshan.gif" alt="roshan animated signature visual" />
         </div>
