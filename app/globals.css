@@ -30,6 +30,7 @@ body {
 a {
   color: #59bfff;
   text-decoration-color: rgba(89, 191, 255, 0.45);
+  text-underline-offset: 2px;
 }
 
 .page {
